@@ -7,8 +7,7 @@ class App extends Component {
     super(props);
 
     this.handleChange = this.handleChange.bind(this);
-    this.onClick = this.onClick.bind(this);
-    this.Company = this.Company.bind(this);
+    
 
 this.state = 
   {
@@ -31,7 +30,7 @@ handleClick(e) {
 
 
 onClick() {
-  axios.get('https://www.alphavantage.co/query?function=SMA&symbol='+Company+'&interval=15min&time_period=10&series_type=close&apikey=C7GEL2PLY274MFLO')
+  axios.get('https://www.alphavantage.co/query?function=SMA&symbol=&interval=15min&time_period=10&series_type=close&apikey=C7GEL2PLY274MFLO')
     .then(function(response) {
       console.log(response);
     
@@ -60,7 +59,7 @@ onClick() {
       <div>
       <form className='App' onSubmit={this.handleClick}>
       <input className='button' type='text' value={symbol} />
-      <button type='submit' onClick={onClick} id='submit'>Enter</button>
+      <button type='submit' id='submit'>Enter</button>
       </form>
       </div>
       </div>
