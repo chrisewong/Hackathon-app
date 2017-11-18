@@ -57,8 +57,8 @@ onClick() {
         
 
       <div>
-      <form className='App' onSubmit={this.handleClick}>
-      <input className='button' type='text' value={symbol} />
+      <form className='App'>
+      <input className='button' onChange={this.handleChange} type='text' value={symbol} />
       <button type='submit' id='submit'>Enter</button>
       </form>
       </div>
